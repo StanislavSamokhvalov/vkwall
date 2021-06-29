@@ -1,4 +1,4 @@
-data class Post(
+data class ost(
     var id: Int,
     val ownerId: Int,
     val fromId: Int,
