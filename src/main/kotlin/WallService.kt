@@ -3,14 +3,14 @@ class WallService {
 
     fun add(post: Post): Post {
         posts += post
-        for ((index) in posts.withIndex()) {
+        for ((index, post) in posts.withIndex()) {
             posts[index] = post.copy(id = index + 1)
         }
         return posts.last()
     }
 
     fun update(post: Post): Boolean {
-        for ((index) in posts.withIndex()) {
+        for ((index, post) in posts.withIndex()) {
             if (post.id == posts[index].id) {
                 posts[index] = post.copy(ownerId = posts[index].ownerId, date = posts[index].date)
                 return true
