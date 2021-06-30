@@ -10,7 +10,7 @@ class WallService {
     }
 
     fun update(post: Post): Boolean {
-        for ((index, post) in posts.withIndex()) {
+        for ((index) in posts.withIndex()) {
             if (post.id == posts[index].id) {
                 posts[index] = post.copy(ownerId = posts[index].ownerId, date = posts[index].date)
                 return true
