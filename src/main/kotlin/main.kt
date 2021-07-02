@@ -1,24 +1,3 @@
-data class Post(
-    var id: Int,
-    val ownerId: Int,
-    val fromId: Int,
-    val createdBy: Int,
-    val date: Int,
-    val text: String,
-    val replyOwnerId: Int,
-    val replyPostId: Int,
-    val friendsOnly: Boolean,
-    val postType: String,
-    val signerId: Int,
-    val canPin: Boolean,
-    val canDelete: Boolean,
-    val canEdit: Boolean,
-    val isPinned: Boolean,
-    val isFavorite: Boolean,
-    val postponedId: Int,
-)
-
-
 fun main() {
     val post1 = Post(
         id = 0,
@@ -38,7 +17,66 @@ fun main() {
         isPinned = true,
         isFavorite = true,
         postponedId = 4,
+        comments = Comments(
+            count = 1,
+            canPost = true,
+            groupsCanPost = true,
+            canClose = true,
+            canOpen = true
+        ),
+        copyright = Copyright(
+            id = 1,
+            link = "link",
+            name = "name",
+            type = "type"
+        ),
+        likes = Likes(
+            count = 1,
+            canLike = true,
+            userLikes = true,
+            canPublish = true
+        ),
+        reposts = Reposts(
+            count = 1,
+            userReposted = true
+        ),
+        views = Views(
+            count = 10
+        ),
+        postSource = PostSource(
+            type = "type",
+            platform = "platform",
+            data = "data",
+            url = "url"
+        ),
+        geo = Geo(
+            type = "type",
+            coordinates = "coordinates",
+            place = Place(
+                count = 10,
+                title = "title",
+                latitude = 10,
+                longitude = 7,
+                created = 8,
+                icon = "icon",
+                checkins = 5,
+                updated = 9,
+                type = 8,
+                country = 9,
+                city = 99,
+                address = "address"
+            )
+        ),
+        donut = Donut(
+            isDonut = true,
+            paid_duration = 10,
+            placeHolder = PlaceHolder(),
+            canPublishFreeCopy = true,
+            editMode = "edit"
+        ),
+        attachments = null
     )
+
     val post2 = Post(
         id = 0,
         ownerId = 2,
@@ -57,6 +95,64 @@ fun main() {
         isPinned = true,
         isFavorite = true,
         postponedId = 4,
+        comments = Comments(
+            count = 1,
+            canPost = true,
+            groupsCanPost = true,
+            canClose = true,
+            canOpen = true
+        ),
+        copyright = Copyright(
+            id = 1,
+            link = "link",
+            name = "name",
+            type = "type"
+        ),
+        likes = Likes(
+            count = 1,
+            canLike = true,
+            userLikes = true,
+            canPublish = true
+        ),
+        reposts = Reposts(
+            count = 1,
+            userReposted = true
+        ),
+        views = Views(
+            count = 10
+        ),
+        postSource = PostSource(
+            type = "type",
+            platform = "platform",
+            data = "data",
+            url = "url"
+        ),
+        geo = Geo(
+            type = "type",
+            coordinates = "coordinates",
+            place = Place(
+                count = 10,
+                title = "title",
+                latitude = 10,
+                longitude = 7,
+                created = 8,
+                icon = "icon",
+                checkins = 5,
+                updated = 9,
+                type = 8,
+                country = 9,
+                city = 99,
+                address = "address"
+            )
+        ),
+        donut = Donut(
+            isDonut = true,
+            paid_duration = 10,
+            placeHolder = PlaceHolder(),
+            canPublishFreeCopy = true,
+            editMode = "edit"
+        ),
+        attachments = null
     )
 
     val service = WallService()

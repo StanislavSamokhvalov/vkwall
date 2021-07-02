@@ -25,6 +25,64 @@ class WallServiceTest {
             isPinned = true,
             isFavorite = true,
             postponedId = 4,
+            comments = Comments(
+                count = 1,
+                canPost = true,
+                groupsCanPost = true,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 1,
+                link = "link",
+                name = "name",
+                type = "type"
+            ),
+            likes = Likes(
+                count = 1,
+                canLike = true,
+                userLikes = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 1,
+                userReposted = true
+            ),
+            views = Views(
+                count = 10
+            ),
+            postSource = PostSource(
+                type = "type",
+                platform = "platform",
+                data = "data",
+                url = "url"
+            ),
+            geo = Geo(
+                type = "type",
+                coordinates = "coordinates",
+                place = Place(
+                    count = 10,
+                    title = "title",
+                    latitude = 10,
+                    longitude = 7,
+                    created = 8,
+                    icon = "icon",
+                    checkins = 5,
+                    updated = 9,
+                    type = 8,
+                    country = 9,
+                    city = 99,
+                    address = "address"
+                )
+            ),
+            donut = Donut(
+                isDonut = true,
+                paid_duration = 10,
+                placeHolder = PlaceHolder(),
+                canPublishFreeCopy = true,
+                editMode = "edit"
+            ),
+            attachments = null
         )
         val original = service.add(post1)
         val result = post1.copy(id = 1)
@@ -53,8 +111,68 @@ class WallServiceTest {
             isPinned = true,
             isFavorite = true,
             postponedId = 4,
+            comments = Comments(
+                count = 1,
+                canPost = true,
+                groupsCanPost = true,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 1,
+                link = "link",
+                name = "name",
+                type = "type"
+            ),
+            likes = Likes(
+                count = 1,
+                canLike = true,
+                userLikes = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 1,
+                userReposted = true
+            ),
+            views = Views(
+                count = 10
+            ),
+            postSource = PostSource(
+                type = "type",
+                platform = "platform",
+                data = "data",
+                url = "url"
+            ),
+            geo = Geo(
+                type = "type",
+                coordinates = "coordinates",
+                place = Place(
+                    count = 10,
+                    title = "title",
+                    latitude = 10,
+                    longitude = 7,
+                    created = 8,
+                    icon = "icon",
+                    checkins = 5,
+                    updated = 9,
+                    type = 8,
+                    country = 9,
+                    city = 99,
+                    address = "address"
+                )
+            ),
+            donut = Donut(
+                isDonut = true,
+                paid_duration = 10,
+                placeHolder = PlaceHolder(),
+                canPublishFreeCopy = true,
+                editMode = "edit"
+            ),
+            attachments = null
         )
-        val post2 = Post(id = 1,
+
+        val post2 = Post(
+            id = 1,
             ownerId = 2,
             fromId = 2,
             createdBy = 3,
@@ -70,7 +188,66 @@ class WallServiceTest {
             canEdit = true,
             isPinned = true,
             isFavorite = true,
-            postponedId = 4,)
+            postponedId = 4,
+            comments = Comments(
+                count = 1,
+                canPost = true,
+                groupsCanPost = true,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 1,
+                link = "link",
+                name = "name",
+                type = "type"
+            ),
+            likes = Likes(
+                count = 1,
+                canLike = true,
+                userLikes = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 1,
+                userReposted = true
+            ),
+            views = Views(
+                count = 10
+            ),
+            postSource = PostSource(
+                type = "type",
+                platform = "platform",
+                data = "data",
+                url = "url"
+            ),
+            geo = Geo(
+                type = "type",
+                coordinates = "coordinates",
+                place = Place(
+                    count = 10,
+                    title = "title",
+                    latitude = 10,
+                    longitude = 7,
+                    created = 8,
+                    icon = "icon",
+                    checkins = 5,
+                    updated = 9,
+                    type = 8,
+                    country = 9,
+                    city = 99,
+                    address = "address"
+                )
+            ),
+            donut = Donut(
+                isDonut = true,
+                paid_duration = 10,
+                placeHolder = PlaceHolder(),
+                canPublishFreeCopy = true,
+                editMode = "edit"
+            ),
+            attachments = null
+        )
 
         service.add(post1)
         val result = service.update(post2)
@@ -98,8 +275,68 @@ class WallServiceTest {
             isPinned = true,
             isFavorite = true,
             postponedId = 4,
+            comments = Comments(
+                count = 1,
+                canPost = true,
+                groupsCanPost = true,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 1,
+                link = "link",
+                name = "name",
+                type = "type"
+            ),
+            likes = Likes(
+                count = 1,
+                canLike = true,
+                userLikes = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 1,
+                userReposted = true
+            ),
+            views = Views(
+                count = 10
+            ),
+            postSource = PostSource(
+                type = "type",
+                platform = "platform",
+                data = "data",
+                url = "url"
+            ),
+            geo = Geo(
+                type = "type",
+                coordinates = "coordinates",
+                place = Place(
+                    count = 10,
+                    title = "title",
+                    latitude = 10,
+                    longitude = 7,
+                    created = 8,
+                    icon = "icon",
+                    checkins = 5,
+                    updated = 9,
+                    type = 8,
+                    country = 9,
+                    city = 99,
+                    address = "address"
+                )
+            ),
+            donut = Donut(
+                isDonut = true,
+                paid_duration = 10,
+                placeHolder = PlaceHolder(),
+                canPublishFreeCopy = true,
+                editMode = "edit"
+            ),
+            attachments = null
         )
-        val post2 = Post(id = 3,
+
+        val post2 = Post(
+            id = 3,
             ownerId = 2,
             fromId = 2,
             createdBy = 3,
@@ -115,7 +352,66 @@ class WallServiceTest {
             canEdit = true,
             isPinned = true,
             isFavorite = true,
-            postponedId = 4,)
+            postponedId = 4,
+            comments = Comments(
+                count = 1,
+                canPost = true,
+                groupsCanPost = true,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 1,
+                link = "link",
+                name = "name",
+                type = "type"
+            ),
+            likes = Likes(
+                count = 1,
+                canLike = true,
+                userLikes = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 1,
+                userReposted = true
+            ),
+            views = Views(
+                count = 10
+            ),
+            postSource = PostSource(
+                type = "type",
+                platform = "platform",
+                data = "data",
+                url = "url"
+            ),
+            geo = Geo(
+                type = "type",
+                coordinates = "coordinates",
+                place = Place(
+                    count = 10,
+                    title = "title",
+                    latitude = 10,
+                    longitude = 7,
+                    created = 8,
+                    icon = "icon",
+                    checkins = 5,
+                    updated = 9,
+                    type = 8,
+                    country = 9,
+                    city = 99,
+                    address = "address"
+                )
+            ),
+            donut = Donut(
+                isDonut = true,
+                paid_duration = 10,
+                placeHolder = PlaceHolder(),
+                canPublishFreeCopy = true,
+                editMode = "edit"
+            ),
+            attachments = null
+        )
 
         service.add(post1)
         val result = service.update(post2)
