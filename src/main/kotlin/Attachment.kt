@@ -43,7 +43,7 @@ class Page(
     val creatorId: Int,
     val title: String,
     val currentUserCanEdit: Boolean,
-    val currentUserCanEdit_access: Boolean,
+    val currentUserCanEditAccess: Boolean,
     val whoCanView: Int,
     val whoCanEdit: Int,
     val edited: Int,

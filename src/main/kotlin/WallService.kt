@@ -1,5 +1,7 @@
 class WallService {
     private var posts = emptyArray<Post>()
+    private var comments = emptyArray<Comment>()
+
 
     fun add(post: Post): Post {
         posts += post
@@ -19,11 +21,24 @@ class WallService {
         return false
     }
 
+    fun createComment(comment: Comment) {
+        for ((index, post) in posts.withIndex()) {
+            if (comment.postId == post.id) {
+                comments += comment
+                return
+            }
+        }
+        throw PostNotFoundException("Поста с id:${comment.postId} не существует")
+    }
+
     fun print() {
         for (post in posts) {
             println(post)
         }
     }
+
+
 }
+
 
 

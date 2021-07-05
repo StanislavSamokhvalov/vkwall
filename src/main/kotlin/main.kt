@@ -155,9 +155,21 @@ fun main() {
         attachments = null
     )
 
+    val comment = Comment(
+        ownerId = 1,
+        postId = 2,
+        fromGroup = 3,
+        message = "message",
+        replyToComment = 0,
+        attachments = null,
+        stickerId = 1,
+        guid = "guid"
+    )
+
     val service = WallService()
     service.add(post1)
     service.add(post2)
     service.update(post2)
+    service.createComment(comment)
     service.print()
 }

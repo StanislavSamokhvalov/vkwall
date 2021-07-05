@@ -1,3 +1,5 @@
+import java.lang.RuntimeException
+
 data class Post(
     var id: Int,
     val ownerId: Int,
@@ -26,6 +28,18 @@ data class Post(
     val donut: Donut?,
     val attachments: Attachments?
 )
+
+data class Comment(
+    val ownerId: Int,
+    val postId: Int,
+    val fromGroup: Int,
+    val message: String,
+    val replyToComment: Int,
+    val attachments: Attachments?,
+    val stickerId: Int,
+    val guid: String
+)
+
 
 data class Comments(
     val count: Int,
@@ -88,10 +102,12 @@ data class Place(
 
 data class Donut(
     val isDonut: Boolean,
-    val paid_duration : Int,
+    val paid_duration: Int,
     val placeHolder: PlaceHolder?,
     val canPublishFreeCopy: Boolean,
     val editMode: String,
 )
 
 class PlaceHolder()
+
+class PostNotFoundException(message: String): RuntimeException(message)
